@@ -1,0 +1,40 @@
+<div class="list-container">
+    <div class="nav-bar">
+        Doctors List
+    </div>
+    <div style="padding:40px;background-color: #01112f" 
+     #theContainer>
+    <div>
+        <mat-grid-list [cols]="columnNum" style="padding-bottom: 100px;padding-top: 50px;">
+            <ng-container *ngFor="let grid of doctorsList;let imageIndex=index">
+                <mat-grid-tile  
+                    style="background-color: transparent;" (click)="previewDoctor(grid)">
+                    <div class="image-view">
+                        <img class="circle" src={{imagePath(imageIndex)}}>
+                        <div class="text">
+                            <div class="doctor-name">{{grid.name}}</div>
+                            <div class="doctor-specialization">{{grid.designation}} |  $ {{grid.price}}</div>
+                            <!-- <div  class="text-content">{{grid.address}}</div>
+                            <div  class="text-content">{{grid.description}}</div>
+                            <div  class="text-content"> *{{grid.rating}}</div>
+                            <div  class="text-content">{{grid.current_location}}</div> -->
+                        </div>
+                    </div>
+                </mat-grid-tile>
+            </ng-container>
+        </mat-grid-list>
+    </div>
+</div>
+<div *ngIf="doctorsList.length == 0">
+    <div class="loading">Loading&#8230;</div>
+</div>
+    <!-- <mat-grid-list cols="4" rowHeight="2:1">
+        <mat-grid-tile *ngFor="let doctor of doctorsList;let indexOfelement=index;">
+            <mat-card class="card-container">
+                <div class="img-container">
+                    <img class="img" src={{imagePath(indexOfelement)}}>
+                </div>
+            </mat-card>
+        </mat-grid-tile>
+    </mat-grid-list> -->
+</div>

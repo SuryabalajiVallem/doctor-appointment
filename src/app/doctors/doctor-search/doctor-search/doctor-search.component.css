@@ -1,0 +1,32 @@
+.doctor-container{
+    background-image: url('../../../../assets/doctor.png');
+    width: 100%;
+    height: 99.2%;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.inner-container{
+    height: 100%;
+    display: flex;
+    width: auto;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+}
+.search-card{
+    
+}
+.search-form{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.search-location{
+    padding-right: 100px;
+}
+.search-clinic{
+    padding-right: 100px;
+}
+.search-icon{
+    padding-right: 50px;
+}
